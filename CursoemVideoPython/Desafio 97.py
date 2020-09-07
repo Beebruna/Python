@@ -10,3 +10,13 @@ Olá, Mundo!
 -----------
 as linhas acompanham o tamanho da mensagem
 '''
+
+def escreva(texto):
+    print('~'*(len(texto) + 4))
+    print(f'  {texto}')
+    print('~'*(len(texto) + 4))
+
+
+escreva('Gustavo Guanabara')
+escreva('CeV')
+escreva('Curso de Python no Youtube')
