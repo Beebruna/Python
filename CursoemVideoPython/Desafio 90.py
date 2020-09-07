@@ -10,16 +10,14 @@ Média é igual a 8.5
 Situação é igual a Aprovado
 '''
 
-dict = {}
+dict = {} #ou dict()
 dict['nome'] = str(input('Digite o nome: ')).strip()
 dict['media'] = float(input('Digite a média: '))
 
 if dict['media'] >= 6.0:
-    situacao = 'Aprovado(a)'
+    dict['situacao'] = 'Aprovado(a)'
 else:
-    situacao = 'Reprovado(a)'
-
-dict['situacao'] = situacao
+    dict['situacao'] = 'Reprovado(a)'
 
 print('\n***************************************')
 print(f'Nome: {dict["nome"]}')

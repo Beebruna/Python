@@ -15,21 +15,30 @@ Ranking dos jogadores:
 '''
 
 from random import randint
+from time import sleep
+from operator import itemgetter
 
-jogador1 = randint(0, 9)
-jogador2 = randint(0, 9)
-jogador3 = randint(0, 9)
-jogador4 = randint(0, 9)
+jogo = {'jogador1': randint(1, 6),
+        'jogador2': randint(1, 6),
+        'jogador3': randint(1, 6),
+        'jogador4': randint(1, 6)
+        }
 
-jogadores = {'jogador1': jogador1,
-             'jogador2': jogador2,
-             'jogador3': jogador3,
-             'jogador4': jogador4}
+ranking = list()
 
-for i in range(4):
+print('Valores sorteados:')
+for k, v in jogo.items():
+    print(f'{k} tirou {v} no dado.')
+    sleep(1)
 
-    if i == 0:
-        maior = jogadores['jogador1']
-    else:
-        for j in range(i):
-            if maior == 
+ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)  
+#se parte 0, ordena em relação às chaves
+#Se for parte 1, ordena em relação aos valores
+#Mas ordena em ordem crescente
+#Para ordem descrecente, reverse=True
+
+print('-='*30)
+print('  == RANKING DO JOGADORES ==')
+for i, v in enumerate(ranking):
+    print(f'{i+1}° lugar: {v[0]} com {v[1]}')
+    sleep(1)
