@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(level=logging.INFO, filename='exec')
+logging.basicConfig(level=logging.INFO, filename='Estudos/programa.log', format='%(asctime)s - %(levelname)s - %(message)s')
 
 def resultado_operacional(faturamento, custo):
     return faturamento - custo
@@ -18,7 +18,7 @@ def lucro_por_acoes(faturamento, custo, percentual_imposto, acoes):
 faturamento = 1000
 custo = 400
 percentual_imposto = 0.3
-acoes = 100
+acoes = 0
 
 resultado = resultado_operacional(faturamento, custo)
 logging.info(f"Resultado: {resultado}")
